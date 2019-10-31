@@ -1,23 +1,62 @@
-<!DOCTYPE html><html><head>
-    <script src="p5.js"></script>
-    <script src="p5.dom.min.js"></script>
-    <script src="p5.sound.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8">
-    <script src="sketch.js"></script>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JavaScript Chatbot</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://glitch.com/edit/favicon.ico"
+      type="image/x-icon"
+    />
   </head>
   <body>
+    <div id="wrapper">
+      <div id="chat-area">
+        <div id="start-screen">
+          <div id="startButton">
+            <div id="robot">
+              <img
+                src="http://tokyocatspecialists.jp/assets/img/home-cat.png"
+              />
+              <div>
+              do you need help?
+              </div>
+              <div>
+                  *
+              </div>
 
-    <div class="container">
-    <img src="bot.png" alt="Avatar" style="width:100%;">
-    <p>Meow meow. Meow?</p>
-    <span class="time-right">11:00</span>
-  </div>
-
-  <div class="container darker input-box">
-    <input type="text" id="msg" placeholder="Type message here...">
-    <button id="submit" onclick="send()">Send</button>
-  </div>
-
-
-</body></html>
+            </div>
+            <img
+              src="https://cdn.glitch.com/e5ca6c0c-b21f-4a54-a1ad-6285b1bf8390%2Fpointer.png"
+              id="cursor"
+            />
+            or ⏎ to start!
+          </div>
+        </div>
+      </div>
+      <div id="compose-area">
+        <textarea
+          id="composer"
+          class="text-input"
+          type="text"
+          autofocus="autofocus"
+        ></textarea>
+        <div id="sendButton">
+          <button>&nbsp;↵&nbsp;</button>
+        </div>
+      </div>
+    </div>
+    <script src="variables.js"></script>
+    <script src="listener.js"></script>
+    <script src="thingsTheBotSays.js"></script>
+    <script src="chatEngine.js"></script>
+    <script src="botChat.js"></script>
+    <script src="userChat.js"></script>
+    <script src="send.js"></script>
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+  </body>
+</html>

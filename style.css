@@ -1,7 +1,158 @@
-html, body {
-  margin: 0;
-  padding: 0;
+html {
+  height: 100%;
+/*   box-sizing: border-box; */
 }
-canvas {
-  display: block;
+
+body {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+/*   box-sizing: border-box; */
+  font-size: 120%;
+  background-color: darkgray;
+  height: 100%;
+  padding: 20px 10px;
+}
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover {
+  outline:0px !important;
+  -webkit-appearance:none;
+}
+
+#chat-area{
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+#compose-area {
+  height: 10%;
+  width: 50%;
+  position: fixed;
+  box-sizing: border-box;
+  bottom: 0;
+  left: 0;
+  display:none;
+}
+
+textarea {
+  position:absolute;
+  padding:20px 20px;
+  background:#C4B7E1;
+  border:0;
+  margin:0;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  font-size: 120%;
+  padding: .5em 10% .5em 2%;
+}
+
+#sendButton {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+/* button {
+  position: relative;
+  box-sizing: border-box;
+  border: none;
+  cursor: pointer;
+  margin: 1px;
+  font-size: 120%;
+  background-color: lightgrey;
+  border-radius: 8px;
+} */
+
+#startButton {
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid black;
+  box-shadow: 3px 3px black;
+  max-width: 200px;
+  cursor: pointer;
+  background-color: seashell;
+}
+
+#robot {
+  margin: 0 auto;
+  width: 200px;
+}
+
+#cursor {
+  position: relative;
+  top: 4px;
+  left: 2px;
+}
+
+.chat-container {
+  width: 100%;
+  float: left;
+  margin-bottom: 10px;
+}
+
+.chat-wrapper {
+  position: relative;
+  height: 100%;
+
+}
+
+.avatar {
+  position: absolute;
+  top: 0px;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-color: darkgray;
+  border: 2px solid darkgray;
+  border-radius: 2px;
+
+}
+
+.avatar-bot {
+  left: -20px;
+  background-image: url("http://www.reportingforhire.com/wp-content/uploads/2019/08/kawaii-cat-drawing-collection-of-free-download-on-ui-ex.png");
+}
+
+.avatar-user {
+  right: -20px;
+  background-image: url("https://qotoqot.com/sad-animations/img/400/sitting_alone/sitting_alone.png");
+}
+
+.chat-bot {
+/*   background-color: #DCDCDC; */
+  background-color: #ffb87a;
+  padding: 7px 15px;
+  float: left;
+  width: 60%;
+  margin: 0px 36% 15px 4%;
+  border-radius: 0px 20px 20px 20px;
+  box-sizing: border-box;
+  box-shadow: -3px 3px #fc79b6;
+  min-height: 2em;
+}
+
+.chat-user {
+/*   background-color: #9370DB; */
+  background-color: #6ed0db;
+  padding: 7px 15px;
+  text-align: right;
+  border-radius: 20px 0px 20px 20px;
+  float: left;
+  width: 60%;
+  margin: 0px 4% 15px 36%;
+  box-sizing: border-box;
+  box-shadow: 3px 3px #c974f7;
+  min-height: 2em;
 }
