@@ -43,12 +43,6 @@ function botChat() {
   listenFor();
 }
 
-/*
-
-This JavaScript file has all of the code to find chats from the bot and user and create the chat interface. Because the chat window will change as you type we need to manipulate the DOM (Document Object Model) and add HTML to display on the screen.
-
-*/
-
 function lookForChat() {
   // If there have been no chats yet, start the bot.
   if (count == 0) {
@@ -98,10 +92,6 @@ function startBot(){
   chatArea.innerHTML = '';
   document.getElementById('compose-area').style.display = 'block';
 }
-
-/*
-This JavaScript file has code to allow a user to choose to press the Start or ⏎ button, or to press the Enter key on their keyboard using the .keycode property.
-*/
 
 // listener is a variable to decide what input to look for
 var enterListener = window;
@@ -157,10 +147,6 @@ function send(sender, message) {
   // Count one more message that has been sent.
   count += 1;
 }
-
-/*
-This JavaScript file has the therapet's 'script', which is the list of questions or statements the therapet will send as chat.
-*/
 
 // botScript is a list of questions the therapet will ask the user.
 var botScript = [
