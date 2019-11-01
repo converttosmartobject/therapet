@@ -1,9 +1,3 @@
-/*
-
-In JavaScript we use variables to store information for later use. To allow variables to be used globally which preserves their information across many functions we have to declare them first with the 'var' keyword. In this JavaScript file we declare all the global variables we will need in other files.
-
-*/
-
 // chatArea is the variable that stores the place on the screen the chats will appear.
 var chatArea = document.getElementById('chat-area');
 
@@ -142,7 +136,7 @@ function listen(e) {
   }
 }
 
-// To avoid double submitting on enter key if someone clicks the button we have to stop listening for enter until the robot sends a question.
+// To avoid double submitting on enter key if someone clicks the button we have to stop listening for enter until the therapet sends a question.
 function pauseListening() {
   enterListener.removeEventListener("keydown", listen);
   startListener.removeEventListener("click", listen);
@@ -165,10 +159,10 @@ function send(sender, message) {
 }
 
 /*
-This JavaScript file has the robot's 'script', which is the list of questions or statements the robot will send as chat.
+This JavaScript file has the therapet's 'script', which is the list of questions or statements the therapet will send as chat.
 */
 
-// botScript is a list of questions the robot will ask the user.
+// botScript is a list of questions the therapet will ask the user.
 var botScript = [
   "Meow..meow Meow?",
   "Meow",
@@ -184,7 +178,7 @@ var botScript = [
   "Meow moewwoeeow meow meowerr Rremeowa mewoewso Meow Meowewe.. meoww"
 ];
 
-// goodbye is a variable that stores what the robot will say when it runs out of other things to say.
+// goodbye is a variable that stores what the therapet will say when it runs out of other things to say.
 var goodbye = "Time's up. Your therapet has to see her next patient now. Good bye.";
 
 // userChat is the function that waits for the user to send a message.
