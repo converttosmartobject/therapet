@@ -129,7 +129,6 @@ function pauseListening() {
 }
 
 // send is the function that sends the next message stored in nextMessage object.
-
 function send(sender, message) {
 
   // Insert the nextMessage into the HTML.
@@ -159,10 +158,9 @@ let botScript = [
 ];
 
 // goodbye is a variable that stores what the therapet will say when it runs out of other things to say.
-let goodbye = "Time's up. Your therapet has to see her next patient now. Good bye.";
+let goodbye = "Time's up. Your therapet has to see her next patient now. Good bye."
 
 // userChat is the function that waits for the user to send a message.
-
 function userChat() {
 
   // Find where the user is inputing text.
@@ -182,6 +180,25 @@ function userChat() {
   userCount += 1;
 
   // Ask the bot for another chat.
-  lookForChat()
+  lookForChat();
+}
 
+function prescription() {
+  rect(50, 50, 300, 300, 20);
+  fill(255);
+  textSize(28);
+  textStyle(BOLD);
+  fill(0)
+text('PRESCRIPTION', 120, 100);
+    img = createImg('https://dejpknyizje2n.cloudfront.net/svgcustom/clipart/preview/29e81ea754c047c9a8d92c7040d219ea.png');
+  img.hide();
+  image(img, 65,70,50, 50);
+  img = createImg('pawprintsign.png');
+img.hide();
+image(img, 220, 230, 80, 80);
+  textStyle(ITALIC);
+  text('get a real cat', 120, 190);
+  textStyle(BOLD);
+  textSize(10);
+  text('DOCTOR SIGNATURE', 210, 320);
 }
