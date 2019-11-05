@@ -1,21 +1,21 @@
 // place on the screen the chats will appear
-var chatArea = document.getElementById('chat-area');
+let chatArea = document.getElementById('chat-area');
 
 // how many total chats have been sent
-var count = 0;
+let count = 0;
 
 // how many chats each the bot and the user have sent
-var botCount = 0;
-var userCount = 0;
+let botCount = 0;
+let userCount = 0;
 
 // next message that will be sent and who will be sending it
-var nextMessage = {
+let nextMessage = {
   message: "",
   sender: ""
 };
 
 // when the bot is done speaking because it has said all of the things in the script
-var botSilent = false;
+let botSilent = false;
 
 // picks the bot's next message.
 function botChat() {
@@ -89,10 +89,10 @@ function startBot(){
 }
 
 // listener is a variable to decide what input to look for
-var enterListener = window;
-var startListener = document.getElementById("startButton");
-var sendListener = document.getElementById("sendButton");
-var composer = document.getElementById("composer");
+let enterListener = window;
+let startListener = document.getElementById("startButton");
+let sendListener = document.getElementById("sendButton");
+let composer = document.getElementById("composer");
 
 // Listen for the enter key on the start screen to start the chat
 if (count == 0) {
@@ -143,7 +143,7 @@ function send(sender, message) {
 }
 
 // botScript is a list of questions the therapet will ask the user.
-var botScript = [
+let botScript = [
   "Meow..meow Meow?",
   "Meow",
   "Meow meow",
@@ -159,7 +159,7 @@ var botScript = [
 ];
 
 // goodbye is a variable that stores what the therapet will say when it runs out of other things to say.
-var goodbye = "Time's up. Your therapet has to see her next patient now. Good bye.";
+let goodbye = "Time's up. Your therapet has to see her next patient now. Good bye.";
 
 // userChat is the function that waits for the user to send a message.
 
